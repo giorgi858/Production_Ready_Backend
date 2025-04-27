@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{%block content %}
+<div style="margin: 20px;">
+    <h2>Links </h2>
+    <div style="margin: 20px;">
+        <a style="text-decoration: none; font-size: 20px;" href="{%url 'api:api_view'%}">API - Application Programming Interface</a>
+    </div>
+    <div style="margin: 20px;">
+        <a style="text-decoration: none; font-size: 20px;" href="{%url 'user-register'%}">User Register</a>
+    </div>
+    <div style="margin: 20px;">
+        <a style="text-decoration: none; font-size: 20px;" href="http://localhost:8000/user-auth/login/">Login</a>
+    </div>
+    <div style="margin: 20px;">
+        <a style="text-decoration: none; font-size: 20px;" href="{%url 'token'%}">Token</a>
+    </div>
+    <div style="margin: 20px;">
+        <a style="text-decoration: none;font-size: 20px;" href="{%url 'token-refresh'%}">Token Refresh</a>
+    </div>
+    <div style="margin: 20px;">
+        <a style="text-decoration: none;font-size: 20px;" href="http://localhost:8000/admin/">Admin</a>
+    </div>
+</div>
+{%endblock content %}
