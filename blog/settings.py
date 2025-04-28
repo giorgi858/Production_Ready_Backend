@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    "whitenoise.runserver_nostatic",    
     'django.contrib.staticfiles',
     'api',
     'rest_framework',  
@@ -44,6 +45,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware", 
 
 ]
 
@@ -144,3 +146,5 @@ CSRF_COOKIE_SECURE=env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)
 
 # (env) ➜  backend docker compose exec web python manage.py  check --deploy
 # System check identified no issues (0 silenced).
+
+STATICFILES_STORAGE ="whitenoise.storage.CompressedManifestStaticFilesStorage" 
