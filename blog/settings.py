@@ -148,3 +148,5 @@ CSRF_COOKIE_SECURE=env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)
 # System check identified no issues (0 silenced).
 
 STATICFILES_STORAGE ="whitenoise.storage.CompressedManifestStaticFilesStorage" 
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https") 
